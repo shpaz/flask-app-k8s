@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: flask-app-route
+spec:
+  host: 
+  to:
+    kind: Service
+    name: flask-app-service
+    weight: 100
+  path: /homepage
+
